@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[icelandic]{babel}
 \usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage{hyperref}
 \usepackage{biblatex} %Imports biblatex package
 \addbibresource{references.bib} %Import the bibliography file
@@ -28,12 +29,28 @@ menningararf við stafræna nýsköpun.
 \section{Inngangur}
 Verkefnið \emph{HiDef Textíll} á sér langa sögu og hófst sem persónulegt áhugamál árið
 2014, þegar höfundur sá \emph{KnitterStream} \cite{knitterstream} trenda á Twitter.
-Þetta var sama vél og amma höfundar átti, PASSAP E6000, en hafði setið ónotuð um
+Þetta var sama vél og amma höfundar átti, Passap E6000 (sjá mynd \ref{fig:skema-e6000}), en hafði setið ónotuð um
 áraraðir. Fyrstu tilraunir voru gerðar í FabLab Reykjavík, en verkefnið varð of tímafrekt
 á meðan höfundur var enn í doktorsnámi og í fullu starfi. Eftir umræður á kaffistofu VR-II 
 eftir að höfundur hóf störf sem akademískur starfsmaður haustið 2023, varð ljóst að hægt 
 væri að gera þetta að rannsóknarverkefni. Með styrk frá \emph{Nýsköpunarsjóði námsmanna}
-sumarið 2024 tók verkefnið á sig nýja mynd, með fjölmörgum samstarfsaðilum.
+sumarið 2024 tók verkefnið á sig nýja mynd, með fjölmörgum samstarfsaðilum. 
+Prjónavélin var til húsa í vélaskála VR-III (sjá mynd \ref{fig:workshop}) við Hjarðarhaga 2 í Reykjavík. Nemendur höfðu einnig aðgang að Sprotamýri, frumkvöðlasetri HÍ í Grósku.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figs/workshop.jpg}
+    \caption{Verkefnið var unnið í vélaskála VR-III.}
+    \label{fig:workshop}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\linewidth]{figs/skema-e6000.png}
+    \caption{Tæknileg skýringarmynd af Passap E6000 vélinni.}
+    \label{fig:skema-e6000}
+\end{figure}
 
 Verkefnið var unnið í samstarfi við Listaháskóla Íslands, frumgerðasmiðju HÍ,
 tölvunarfræðideild HÍ, rafmagns- og tölvuverkfræðideild HÍ, Textílmiðstöðina á Blöndósi,
@@ -42,11 +59,18 @@ Vísindavöku Rannís og UTmessunni hjá Ský, og sótt er um áframhaldandi sty
 þróa hana áfram.
 
 \section{Vélrænar uppfærslur}
-Til að uppfæra vélbúnað vélarinnar var upprunalega \emph{Form} tölvan sem stýrði henni
-skipt út fyrir \emph{Arduino} örtölvu. Elías Lúðvíksson, BS nemi í vélaverkfræði við HÍ,
+Til að uppfæra vélbúnað vélarinnar var upprunalega \emph{Form} tölvan (sjá hluta 12 á mynd \ref{fig:skema-e6000}) sem stýrði henni
+skipt út fyrir \emph{Arduino} örtölvu (sjá mynd \ref{fig:arduino}). Elías Lúðvíksson, BS nemi í vélaverkfræði við HÍ,
 sá um þessa uppfærslu. Eldri tölvukerfið, sem notaðist við DIN-6 snúru og lokuð
 hugbúnaðarstýringarkerfi, var fjarlægt og í staðinn var sett inn nýtt kerfi byggt á
 opnum hugbúnaði.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figs/arduino.jpg}
+    \caption{Arduino örtölva tengd við DIN-6 tengi á Passap E6000 -- \textit{mbl.is/Kristinn Magnússon}}
+    \label{fig:ardino}
+\end{figure}
 
 Nýja kerfið tengist sleðanum á vélbúnaðinum beint í gegnum \emph{Arduino}, sem tekur
 við merkjum frá ljósaskynjurum og stýrir nálastillurum með segulfestingum.
@@ -72,10 +96,38 @@ Með því að nýta gögn úr \emph{Íslensku Sjónabókinni} \cite{sjonabok} v
 sem umbreytir gömlum útsaumsmunstrum í stafrænt prjónamynstur. Reikniritin sem voru þróuð
 skila sérsniðnum prjónamynstrum með sveigjanlegum stillingum fyrir mismunandi nálabeð.
 
+\begin{figure}
+    \centering
+    \includegraphics[height=.3\textheight]{figs/sjonabok_before.png}
+    \includegraphics[height=.3\textheight]{figs/sjonabok_after.png}
+    \caption{Til hægri má sjá munstur úr \textit{Íslensku Sjónabókinni} í \texttt{.eps} skrá. Til vinstri hvernig sama munstur lítur út eftir vinnslu á \texttt{.png} formi.}
+    \label{fig: sjonabok_munstur}
+\end{figure}
+
+
 \section{Prjón og hönnunarvinna}
 Fatahönnunin, sem Guðrún Ísafold Hilmarsdóttir, BA nemi í fatahönnun við LHÍ, sá um,
 var órjúfanlegur hluti af verkefninu. Hún veitti fagurfræðilega leiðsögn og lagði áherslu á
 hvernig útfærsla á mynstrum tengdist takmörkunum og möguleikum vélarinnar.
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figs/hallgrimskirkja.JPG}
+    \caption{Hallgrímskirkja með Sjónarbókar bakgrunni}
+    \label{fig:hallgrimskirkja}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figs/collection.JPG}
+    \caption{Útfærslur á fatnaði út frá prjónaprufum verkefnisins.}
+    \label{fig:collection}
+\end{figure}
+
+
 
 \section{Þverfaglegt samstarf}
 Verkefnið sýnir hvernig samvinna milli ólíkra fræðasviða getur skapað afurð sem er
@@ -83,9 +135,68 @@ stærri en hver einstakur þátttakandi. Samstarf Guðrúnar (hönnun), Snæfrí
 og Elíasar (vélbúnaður) tryggði að verkefnið varð heildstætt, þar sem allir þættir
 tengdust í einni samþættri lausn.
 
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=\linewidth, clip=true, trim=0 5mm 0 0]{figs/hallo_heimur_forskrift.png}
+        \caption{Forskrift}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\linewidth, clip=true, trim=0 5mm 0 0]{figs/hallo_heimur_prjon.png}
+        \caption{Fyrsta atrenna}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\linewidth, clip=true, trim=0 0 0 5mm]{figs/hallo_heimur_prjon.png}
+        \caption{Seinni atrenna}
+    \end{subfigure}
+    \caption{Þróun á prjónamynstri fyrir \textit{Halló heimur}.}
+    \label{fig:hallo_heimur}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[height=.20\textheight]{figs/thjms5898_246_0.png}
+    \hspace{24pt}
+    \includegraphics[height=.20\textheight]{figs/peacock.jpg}
+    \caption{Páfugl, bls. 246 í Sjónabók (Þjms. 5898)}
+    \label{fig:peacock}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[height=.20\textheight]{figs/thjms5898_268.png}
+    \hspace{24pt}
+    \includegraphics[height=.25\textheight]{figs/repeat.jpg}
+    \caption{Endurtekið mótif, bls. 268 í Sjónabók (Þjms. 5898)}
+    \label{fig:repeat}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[height=.20\textheight]{figs/thjms5898_210.png}
+    \hspace{24pt}
+    \includegraphics[height=.25\textheight]{figs/flower.jpg}
+    \caption{Blóm, bls. 210 í Sjónabók (Þjms. 5898)}
+    \label{fig:flower}
+\end{figure}
+
+
 \section{Framtíðarhorfur og næstu skref}
-Næsta markmið verkefnisins er að gera vélina auðveldari til flutnings fyrir viðburði og bæta sjálfvirkni í litastýringu.
-Stefnt er að áframhaldandi þróun með áherslu á opna hugbúnaðarlausn fyrir listafólk og hönnuði.
+Næsta markmið verkefnisins er að gera vélina auðveldari til flutnings fyrir viðburði og bæta sjálfvirkni í litastýringu. 
+Stefnt er að því að þróa áfram notendavænt vefviðmót sem gerir gestum og gangandi kleift að senda inn mynstur og prjóna þau í rauntíma þegar vélin er til sýnis.
+
+Einnig er áhersla lögð á áframhaldandi samþættingu stafrænnar listsköpunar við handverk, 
+þar sem prjónaferlið er nýtt sem skapandi miðill. Með þróun sjálfvirkrar mynsturgerðar og aðlögunar að sögulegum mynstrum 
+er unnið að því að tengja saman forna handverkshefð og nútímatækni.
+
+Stefnt er að sýningu á \emph{Hönnunarmars 2026}, þar sem afrakstur verkefnisins verður kynntur. Með því verður sýnt hvernig
+samspil hugbúnaðar, vélbúnaðar og hönnunar getur leitt til nýrra möguleika í sjálfbærri textílframleiðslu.
+
+Öll þróun verkefnisins er opin og aðgengileg í gegnum GitHub, \url{https://github.com/hideftextiles/}, þar sem hægt er að fylgjast með þróun hugbúnaðarins og nota hann í eigin verkefnum. 
 
 \printbibliography
 
